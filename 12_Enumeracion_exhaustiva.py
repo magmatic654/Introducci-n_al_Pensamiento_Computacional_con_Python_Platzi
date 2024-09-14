@@ -7,6 +7,7 @@ answer = 0
 
 # Mientras answer elevado al cuadrado saa menor que el numero a encontrar su raiz cuadrada (objective), el programa sumara de uno en uno hasta encontrar un valor que multiplicado por si mismo de igual al resultado, si no lo encuentara, simplemente se quedara en asnwer un resultado que multiplicado por si mismo no es igual al objective  
 while answer**2 < objective:
+    print(answer ** 2)
 
     answer += 1
 
