@@ -30,13 +30,15 @@ def program():
         lower = 0
         higher = max(1, objective) # Obtiene el maximo entre 1 y el objetivo y se asigna a higher
         answer = (lower + higher) / 2
-
+        temp_answer = None
         while abs(answer**2 - objective) >= epsilon:
             if answer**2 < objective:
                 lower = answer
+            elif answer == temp_answer:
+                 return answer
             else:
                 higher = answer
-            
+            temp_answer = answer
             answer = (lower + higher) / 2
         return answer
 
@@ -52,6 +54,6 @@ def program():
              print('No se hallo un resultado que satisfaga los requerimientos')
         
         seguir_programa = input('Deseas seguir realizando calculos? Y / N =>').lower()
-        if seguir_programa != 'Y':
+        if seguir_programa != 'y':
             return
 program()
